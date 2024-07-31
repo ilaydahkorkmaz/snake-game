@@ -1,0 +1,109 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin: 0;
+  font-family: 'VT323', monospace;
+}
+
+body,
+.snake {
+  background-color: #414141;
+}
+
+#game-board {
+  border-radius: 100px;
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  grid-template-rows: repeat(20, 20px);
+  margin: 5px;
+}
+
+.game-border-1 {
+  border: #595f43 solid 10px;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 10px #595f43;
+}
+
+.game-border-2 {
+  border: #abb78a solid 8px;
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 10px #abb78a;
+}
+
+.game-border-3 {
+  border: #8b966c solid 30px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 5px #5b6448;
+}
+
+#instruction-text {
+  position: absolute;
+  top: 60%;
+  color: #333;
+  width: 300px;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 30px;
+  margin: 0;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+}
+
+#score {
+  color: #abb78a;
+}
+
+#score,
+#highScore {
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+#highScore {
+  color: #d8ddca;
+  display: none;
+}
+
+.game-border-3,
+#logo {
+  background-color: #c4cfa3;
+}
+
+.snake {
+  display: flex; /* Yılanı tek parça gibi göstermek için flexbox kullan */
+  align-items: center; /* Parçaların düzgün hizalanmasını sağlar */
+}
+
+.snake-part {
+  width: 20px; /* Yılanın parçalarının genişliği */
+  height: 20px; /* Yılanın parçalarının yüksekliği */
+  background: linear-gradient(135deg, #3a3a3a, #515151); /* Degrade renk geçişi */
+  border: #5a5a5a 1px solid; /* Düz kenarlık */
+  border-radius: 50%; /* Yuvarlak köşeler */
+  margin-left: -5px; /* Parçaların üst üste binmesini sağlar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Gölge efekti */
+  transition: transform 0.1s linear; /* Hareket için geçiş efekti */
+}
+
+.snake-part:first-child {
+  margin-left: 0; /* İlk parçanın sola yaslanmasını engeller */
+  background: linear-gradient(135deg, #3a3a3a, #626262); /* Baş kısmına özel renk tonu */
+}
+
+
+
+.food {
+  background-color: #9999;
+  border: #9999 2px solid;
+  height: 10px;
+  width: 10px;
+}
+
+#logo {
+  position: absolute;
+}
